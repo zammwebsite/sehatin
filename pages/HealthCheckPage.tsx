@@ -43,6 +43,9 @@ const HealthCheckPage: React.FC = () => {
         videoRef.current.srcObject = null;
     }
   }
+  const model = await blazeface.load();
+const predictions = await model.estimateFaces(videoElement, false);
+  
 
   useEffect(() => {
     startCamera();
