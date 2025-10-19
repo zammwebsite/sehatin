@@ -38,7 +38,6 @@ setInput('');
 setIsLoading(true);
 
 try {
-  // Ambil respons AI dari Gemini Service
   const aiResponseText = await generateChatResponse(input);
   const aiMessage: ChatMessageType = {
     id: (Date.now() + 1).toString(),
