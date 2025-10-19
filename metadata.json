@@ -1,0 +1,7 @@
+{
+  "name": "Sehatin",
+  "description": "Sehatin is a web-based digital health application that helps users perform self-health checks and quick consultations through an AI Medical Assistant Chat. This application combines AI technology, a TensorFlow.js-based camera, and a dashboard to provide a modern, educational, and beneficial experience.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
