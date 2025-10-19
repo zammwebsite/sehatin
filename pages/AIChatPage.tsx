@@ -8,7 +8,10 @@ const AIChatPage: React.FC = () => {
 const [messages, setMessages] = useState<ChatMessageType[]>([
 {
 id: "initial",
-text: "Halo! Saya **Sehatin**, asisten medis AI Anda. 😊\n\nAnda bisa bertanya tentang gejala, pola makan, tidur, atau kesehatan umum. Ingat, saya **bukan dokter**, jadi untuk kondisi serius, silakan hubungi tenaga medis profesional.",
+text:
+"Halo! Saya **Sehatin**, asisten medis AI Anda. 😊\n\n" +
+"Anda bisa bertanya tentang gejala, pola makan, tidur, atau kesehatan umum.\n" +
+"Ingat, saya **bukan dokter**, jadi untuk kondisi serius silakan hubungi tenaga medis profesional.",
 sender: "ai",
 },
 ]);
@@ -17,7 +20,6 @@ const [input, setInput] = useState("");
 const [isLoading, setIsLoading] = useState(false);
 const messagesEndRef = useRef<HTMLDivElement>(null);
 
-// Auto scroll ke bawah setiap kali pesan baru masuk
 const scrollToBottom = () => {
 messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
 };
@@ -51,7 +53,8 @@ try {
   console.error("Error getting AI response:", error);
   const errorMessage: ChatMessageType = {
     id: (Date.now() + 1).toString(),
-    text: "Maaf, terjadi kesalahan saat menghubungi AI. Coba lagi nanti ya 🙏",
+    text:
+      "Maaf, terjadi kesalahan saat menghubungi AI. Coba lagi nanti ya 🙏",
     sender: "ai",
   };
   setMessages((prev) => [...prev, errorMessage]);
