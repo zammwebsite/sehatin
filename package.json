@@ -1,7 +1,7 @@
 {
   "name": "sehatin",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "@google/genai": "^1.25.0",
+    "@tensorflow/tfjs": "^4.21.0",
     "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.4",
-    "recharts": "^3.3.0",
-    "react-dom": "^19.2.0"
+    "recharts": "^3.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
